@@ -1,0 +1,17 @@
+{
+  "name": "Toy Haven - Collectible Store",
+  "short_name": "Toy Haven",
+  "description": "A modern online toy and collectible store selling figurines, toys, board games and diecast model cars.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#12141c",
+  "theme_color": "#ff7a29",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    }
+  ]
+}

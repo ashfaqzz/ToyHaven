@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toy Haven | Premium Toys, Figurines &amp; Collectibles</title>
+  <meta name="description" content="Toy Haven is a modern online toy and collectible store selling figurines, toys, board games and diecast model cars.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ff7a29">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="index.html" class="logo">Toy<span>Haven</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-page="home">Home</a></li>
+        <li><a href="products.html" data-page="products">Shop</a></li>
+        <li><a href="cart.html" data-page="cart">Cart</a></li>
+        <li><a href="wishlist.html" data-page="wishlist">Wishlist</a></li>
+        <li><a href="feedback.html" data-page="feedback">Feedback</a></li>
+      </ul>
+
+      <div class="nav-icons">
+        <a href="wishlist.html" class="icon-link" aria-label="View wishlist">
+          &#9825;<span class="badge wishlist-count" style="display:none">0</span>
+        </a>
+        <a href="cart.html" class="icon-link" aria-label="View cart, items">
+          &#128722;<span class="badge cart-count" style="display:none">0</span>
+        </a>
+        <button type="button" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="visually-hidden">Toy Haven – Toys and Collectibles</h1>
+    <!-- ============ HERO / AUTO-ROTATING SLIDER ============ -->
+    <section class="hero" aria-label="Featured categories">
+      <div class="slider" aria-roledescription="carousel">
+        <div class="slide active">
+          <div class="slide-copy">
+            <p class="eyebrow">Collectible Figurines</p>
+            <h2>Museum-grade figures made for display</h2>
+            <p>Hand-painted, highly articulated collectibles from your favourite universes, built to last on any shelf.</p>
+            <a class="btn btn-primary" href="products.html?category=figurines">Shop Now</a>
+          </div>
+          <div class="slide-image">
+           <img src="images/HULK%2011.8%20Inches%20Figure.jpg" alt="Hulk collectible figure">
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-copy">
+            <p class="eyebrow">Toys</p>
+            <h2>Playtime that sparks imagination</h2>
+            <p>From remote control cars to building block sets, our toy range is built for hours of hands-on fun.</p>
+            <a class="btn btn-primary" href="products.html?category=toys">Shop Now</a>
+          </div>
+          <div class="slide-image">
+            <img src="images/dinosaur.jpg" alt="Hatching dinosaur egg toy">
+        </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-copy">
+            <p class="eyebrow">Board Games</p>
+            <h2>Game night, upgraded</h2>
+            <p>Strategy epics, party classics and cooperative mysteries for every kind of table.</p>
+            <a class="btn btn-primary" href="products.html?category=boardgames">Shop Now</a>
+          </div>
+          <div class="slide-image">
+            <img src="images/WS%20Game%20Company.webp" alt="WS board game">
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-copy">
+            <p class="eyebrow">Diecast Model Cars</p>
+            <h2>Precision scale replicas</h2>
+            <p>From vintage muscle cars to modern supercars, each model is finished with real metal detailing.</p>
+            <a class="btn btn-primary" href="products.html?category=diecast">Shop Now</a>
+          </div>
+          <div class="slide-image">
+            <img src="images/Hot%20Wheels%20Car%2010%20pack.webp" alt="Hot Wheels model car collection">
+          </div>
+        </div>
+
+        <button type="button" class="slider-arrow prev" aria-label="Previous slide">&#8249;</button>
+        <button type="button" class="slider-arrow next" aria-label="Next slide">&#8250;</button>
+        <div class="slider-dots" role="tablist" aria-label="Choose a slide"></div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED PRODUCTS ============ -->
+    <section class="section" aria-labelledby="featuredHeading">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h2 id="featuredHeading">Featured Products</h2>
+            <p>A hand-picked mix from every category in the store.</p>
+          </div>
+          <a class="btn btn-outline" href="products.html">Shop All Products</a>
+        </div>
+        <div class="product-grid" id="featuredProducts">
+          <!-- JavaScript renders featured product cards here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCT OF THE DAY ============ -->
+    <section class="section section-alt" aria-labelledby="potdHeading">
+      <div class="container">
+        <h2 id="potdHeading" class="visually-hidden">Product of the Day</h2>
+        <div class="potd" id="productOfDay">
+          <!-- JavaScript renders today's featured product here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CATEGORY CALL TO ACTION ============ -->
+    <section class="section" aria-labelledby="ctaHeading">
+      <div class="container" style="text-align:center;">
+        <h2 id="ctaHeading">Four categories. One collection worth building.</h2>
+        <p style="color:var(--text-muted); max-width:60ch; margin:0 auto 24px;">
+          Figurines, toys, board games and diecast cars — all curated for collectors who care about quality.
+        </p>
+        <a class="btn btn-primary" href="products.html">Shop Now</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <section class="footer-col" aria-label="About Toy Haven">
+          <h3>Toy Haven</h3>
+          <p>Premium collectible figurines, toys, board games and diecast model cars for collectors and families alike.</p>
+          <div class="social-links">
+            <a href="#" class="icon-link" aria-label="Toy Haven on Instagram">IG</a>
+            <a href="#" class="icon-link" aria-label="Toy Haven on Facebook">FB</a>
+            <a href="#" class="icon-link" aria-label="Toy Haven on X">X</a>
+          </div>
+        </section>
+
+        <nav class="footer-col" aria-label="Footer navigation">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="wishlist.html">Wishlist</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </nav>
+
+        <section class="footer-col" aria-label="Contact information">
+          <h3>Contact</h3>
+          <address style="font-style:normal; color:var(--text-muted);">
+            <p>123 Play Street, Toytown</p>
+            <p>support@toyhaven.example</p>
+            <p>+1 (555) 010-2020</p>
+          </address>
+        </section>
+
+        <section class="footer-col" aria-label="Newsletter subscription">
+          <h3>Newsletter</h3>
+          <p>Get notified about new arrivals and exclusive collector drops.</p>
+          <form id="newsletterForm" class="newsletter-form">
+            <label class="visually-hidden" for="newsletterEmail">Email address</label>
+            <input type="email" id="newsletterEmail" name="email" placeholder="you@example.com" autocomplete="email" required>
+            <button type="submit" class="btn btn-primary btn-small">Join</button>
+          </form>
+          <p id="newsletterMessage" class="form-message" role="status"></p>
+        </section>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Toy Haven. All rights reserved.</p>
+        <p>Built for a university web development assignment.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

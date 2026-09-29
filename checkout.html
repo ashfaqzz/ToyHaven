@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Toy Haven</title>
+  <meta name="description" content="Complete your Toy Haven order with a simple, validated checkout form. This is a front-end simulation only.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ff7a29">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="checkout">
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="index.html" class="logo">Toy<span>Haven</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-page="home">Home</a></li>
+        <li><a href="products.html" data-page="products">Shop</a></li>
+        <li><a href="cart.html" data-page="cart">Cart</a></li>
+        <li><a href="wishlist.html" data-page="wishlist">Wishlist</a></li>
+        <li><a href="feedback.html" data-page="feedback">Feedback</a></li>
+      </ul>
+
+      <div class="nav-icons">
+        <a href="wishlist.html" class="icon-link" aria-label="View wishlist">
+          &#9825;<span class="badge wishlist-count" style="display:none">0</span>
+        </a>
+        <a href="cart.html" class="icon-link" aria-label="View cart, items">
+          &#128722;<span class="badge cart-count" style="display:none">0</span>
+        </a>
+        <button type="button" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="container">
+        <h1>Checkout</h1>
+        <p>This is a front-end simulation only &mdash; no real payment is processed.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:16px;" aria-labelledby="checkoutHeading">
+      <div class="container cart-layout">
+        <h2 id="checkoutHeading" class="visually-hidden">Checkout form</h2>
+
+        <div>
+          <form class="form-card" id="checkoutForm" novalidate>
+            <fieldset>
+              <legend>Contact &amp; Delivery Details</legend>
+
+              <div class="field">
+                <label for="checkoutName">Full Name</label>
+                <input type="text" id="checkoutName" name="fullName" autocomplete="name" required>
+                <p class="field-error" id="checkoutNameError"></p>
+              </div>
+
+              <div class="field">
+                <label for="checkoutEmail">Email Address</label>
+                <input type="email" id="checkoutEmail" name="email" autocomplete="email" required>
+                <p class="field-error" id="checkoutEmailError"></p>
+              </div>
+
+              <div class="field">
+                <label for="checkoutAddress">Delivery Address</label>
+                <textarea id="checkoutAddress" name="address" autocomplete="street-address" required></textarea>
+                <p class="field-error" id="checkoutAddressError"></p>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Payment Method</legend>
+              <div class="radio-group" role="radiogroup" aria-label="Payment method">
+                <label class="radio-option">
+                  <input type="radio" name="payment" value="card" required>
+                  Card
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="payment" value="cod" required>
+                  Cash on Delivery
+                </label>
+              </div>
+              <p class="field-error" id="checkoutPaymentError"></p>
+            </fieldset>
+
+            <button type="submit" class="btn btn-primary btn-block">Place Order</button>
+          </form>
+
+          <!-- Shown after a successful order, replaces the form -->
+          <div class="success-card" id="checkoutSuccess" hidden>
+            <div class="success-icon" aria-hidden="true">&#10003;</div>
+            <h2>Order Placed Successfully!</h2>
+            <p>Thank you for shopping with Toy Haven. A confirmation has been saved to your order history.</p>
+            <p class="order-ref">Order #<span id="orderReference"></span></p>
+            <p><a href="index.html" class="btn btn-primary">Return Home</a></p>
+          </div>
+        </div>
+
+        <aside class="summary-card" id="checkoutSummaryCard" aria-label="Order summary">
+          <h2>Order Summary</h2>
+          <div id="checkoutSummary"><!-- JavaScript renders order summary here --></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <section class="footer-col" aria-label="About Toy Haven">
+          <h3>Toy Haven</h3>
+          <p>Premium collectible figurines, toys, board games and diecast model cars for collectors and families alike.</p>
+          <div class="social-links">
+            <a href="#" class="icon-link" aria-label="Toy Haven on Instagram">IG</a>
+            <a href="#" class="icon-link" aria-label="Toy Haven on Facebook">FB</a>
+            <a href="#" class="icon-link" aria-label="Toy Haven on X">X</a>
+          </div>
+        </section>
+
+        <nav class="footer-col" aria-label="Footer navigation">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="wishlist.html">Wishlist</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </nav>
+
+        <section class="footer-col" aria-label="Contact information">
+          <h3>Contact</h3>
+          <address style="font-style:normal; color:var(--text-muted);">
+            <p>123 Play Street, Toytown</p>
+            <p>support@toyhaven.example</p>
+            <p>+1 (555) 010-2020</p>
+          </address>
+        </section>
+
+        <section class="footer-col" aria-label="Newsletter subscription">
+          <h3>Newsletter</h3>
+          <p>Get notified about new arrivals and exclusive collector drops.</p>
+          <form id="newsletterForm" class="newsletter-form">
+            <label class="visually-hidden" for="newsletterEmail">Email address</label>
+            <input type="email" id="newsletterEmail" name="email" placeholder="you@example.com" autocomplete="email" required>
+            <button type="submit" class="btn btn-primary btn-small">Join</button>
+          </form>
+          <p id="newsletterMessage" class="form-message" role="status"></p>
+        </section>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Toy Haven. All rights reserved.</p>
+        <p>Built for a university web development assignment.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
